@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+
+
+        <!-- Membuat Data Dummy Demo Training Course -->
+
+        <record id="data_demo_course_1" model="training.course">
+            <field name="name">Technical</field>
+            <field name="description">Training technical memiliki tujuan agar user dapat membuat dan mengcustom modul ketika implementasi</field>
+        </record>
+
+        <record id="data_demo_course_2" model="training.course">
+            <field name="name">Functional</field>
+            <field name="description">Training functional memiliki tujuan agar user dapat mengoperasikan sistem seacara baik dan benar</field>
+        </record>
+
+        <record id="data_demo_course_3" model="training.course">
+            <field name="name">Python</field>
+            <!-- tidak ada tambahan description -->
+        </record>
+
+
+    </data>
+</odoo>

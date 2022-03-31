@@ -1,0 +1,40 @@
+<odoo>
+
+    <template id="report_session_draft">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page" style="text-align: center;">
+                        <H2>Data Sesi Kursus</H2>
+                        <table style="height: 36px; width: 100%; border-collapse: collapse; border-style: solid; border-color: #000000;" border="1" cellspacing="1" cellpadding="5">
+                            <thead>
+                                <tr>
+                                    <th style="width: 33.3333%; text-align: left;">Name</th>
+                                    <th style="width: 33.3333%; text-align: left;">Email</th>
+                                    <th style="width: 33.3333%; text-align: left;">Kelamin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.attendee_ids" t-as="attendee">
+                                    <t t-set="gender" t-value="dict([('male','Pria'),('female','Wanita'), (False, '')])"/>
+                                    <tr>
+                                        <td>
+                                            <t t-esc="attendee.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="attendee.email"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="gender[attendee.sex]"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
